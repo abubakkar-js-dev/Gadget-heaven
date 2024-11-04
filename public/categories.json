@@ -1,0 +1,37 @@
+[
+    {
+        "category_id": 0,
+        "category_name": "All Products",
+        "category_description": "All available products in one place."
+    },
+    {
+        "category_id": 1,
+        "category_name": "Laptops",
+        "category_description": "High-performance laptops for all your needs, from gaming to professional work."
+    },
+    {
+        "category_id": 2,
+        "category_name": "Phones",
+        "category_description": "Latest smartphones with cutting-edge technology."
+    },
+    {
+        "category_id": 3,
+        "category_name": "Accessories",
+        "category_description": "Essential accessories for all your gadgets."
+    },
+    {
+        "category_id": 4,
+        "category_name": "Smart Watches",
+        "category_description": "Smartwatches to keep you connected and fit."
+    },
+    {
+        "category_id": 5,
+        "category_name": "MacBook",
+        "category_description": "Powerful and sleek MacBooks for professionals and creatives."
+    },
+    {
+        "category_id": 6,
+        "category_name": "IPhone",
+        "category_description": "The latest iPhones with advanced features and performance."
+    }
+]

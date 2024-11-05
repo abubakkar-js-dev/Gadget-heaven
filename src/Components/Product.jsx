@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Product = ({ product }) => {
   const { product_image, product_title, price,product_id } = product;
   return (
-    <Link to={`/product/${product_id}`}>
+    <Link to={`/products/${product_id}`}>
       <div className="p-5 rounded-2xl bg-white shadow-sm flex flex-col">
         <img
           className="h-[180px] rounded-2xl w-full mb-6"

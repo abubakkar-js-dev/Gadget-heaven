@@ -4,7 +4,7 @@ const Footer = () => {
       <h2 className="text-center text-3xl font-bold text-black mb-2">Gadget Heaven</h2>
       <p className="text-center text-base text-gray-500 mb-6 md:mb-8">Leading the way in cutting-edge technology and innovation.</p>
       <div className="border-t mb-6"></div>
-      <footer className="footer text-neutral-content p-10 container justify-items-center ">
+      <footer className="footer text-neutral-content p-10 container lg:justify-items-center ">
         <nav>
           <h6 className=" mb-3 text-black text-base md:text-lg font-bold">Services</h6>
           <a className="link link-hover text-gray-700 text-sm md:text-base">Product Support</a>

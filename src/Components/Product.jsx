@@ -18,8 +18,8 @@ const Product = ({ product }) => {
           Price: ${price}
         </p>
         <div>
-          <button className="text-primary py-2 px-5 border border-primary hover:bg-primary hover:text-white rounded-full transition">
-            View Details
+          <button className="text-primary p-[1px] bg-gradient-to-b from-primary via-primary to-pink-400 hover:to-primary  hover:!bg-primary hover:text-white rounded-full transition">
+            <div className="py-2 px-5 bg-white hover:bg-primary rounded-full transition">View Details</div>
           </button>
         </div>
       </div>

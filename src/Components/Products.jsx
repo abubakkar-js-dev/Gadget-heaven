@@ -14,7 +14,6 @@ const Products = () => {
     }
   },[allProducts])
 
-  console.log(categories);
   useEffect(() => {
     fetch("/categories.json")
       .then((res) => res.json())
@@ -48,9 +47,15 @@ const Products = () => {
             </button>
           ))}
         </div>
-        <div className="md:col-span-2 lg:col-span-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {products.map(product => <Product key={product.product_id} product={product} />)}
+        {products.length > 0 ? (
+                  <div className="md:col-span-2 lg:col-span-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {products.map(product => <Product key={product.product_id} product={product} />)}
+              </div>
+        ): <div className="md:col-span-2 lg:col-span-4 flex justify-center items-center mx-auto w-full">
+            <h2 className="text-center text-3xl text-primary/70">No Products Found For This Cateogory!</h2>
         </div>
+        }
+        
       </div>
     </section>
   );

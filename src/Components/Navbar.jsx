@@ -1,8 +1,10 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
+import PropTypes from "prop-types";
 
-const Navbar = () => {
+const Navbar = ({cartListCount,wishListCount}) => {
+  const {pathname} = useLocation();
   const Links = (
     <>
       <li>
@@ -14,11 +16,14 @@ const Navbar = () => {
       <li>
         <NavLink to={"/dashboard"}>Dashboard</NavLink>
       </li>
+      <li>
+        <NavLink to={"/contact-us"}>Contact Us</NavLink>
+      </li>
     </>
   );
   return (
-    <nav className="bg-primary m-[30px] mb-0 pb-8 md:pb-10 lg:pb-12 rounded-t-[32px]">
-      <div className="navbar container text-white">
+    <nav className={`${pathname === '/' ? 'bg-primary text-white pb-10': 'text-black'} m-[30px] mb-0 pt-3 rounded-t-[32px]`}>
+      <div className="navbar container ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex="0" role="button" className="btn btn-ghost lg:hidden">
@@ -54,13 +59,15 @@ const Navbar = () => {
            
           </Link>
           <Link>
-            <div className="h-10 w-10 flex justify-center items-center bg-white rounded-full">
+            <div className="h-10 w-10 flex justify-center items-center bg-white border rounded-full relative">
             < BsCart3 className="text-gray-700" />
+            <span className="absolute -top-3 -right-4 bg-gray-100 text-primary px-3 rounded-full text-sm">{cartListCount}</span>
             </div>
           </Link>
           <Link>
-            <div className="h-10 w-10 flex justify-center items-center bg-white rounded-full">
+            <div className="h-10 w-10 flex justify-center items-center bg-white border rounded-full relative">
             <FaRegHeart className="text-gray-700" />
+            <span className="absolute -top-3 -right-4 bg-gray-100 text-primary px-3 rounded-full text-sm">{wishListCount}</span>
             </div>
           </Link>
         </div>
@@ -68,5 +75,10 @@ const Navbar = () => {
     </nav>
   );
 };
+
+Navbar.propTypes = {
+  cartListCount: PropTypes.number.isRequired,
+  wishListCount: PropTypes.number.isRequired,
+}
 
 export default Navbar;

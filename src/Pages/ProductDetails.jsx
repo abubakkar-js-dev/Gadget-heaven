@@ -82,8 +82,8 @@ const ProductDetails = () => {
         <Heading headingText="Product Details" headingTagName="h2" />
       </div>
       <div className="container lg:-mt-[280px] flex flex-col justify-center items-center py-8">
-        <div className="w-full p-6 lg:p-8 bg-white rounded-3xl shadow  flex gap-6 lg:gap-8">
-          <div className="w-1/3 rounded-lg">
+        <div className="w-full p-6 lg:p-8 bg-white rounded-3xl shadow  flex flex-col lg:flex-row gap-6 lg:gap-8">
+          <div className="w-full lg:w-1/3 rounded-lg">
             <img
               className="w-full"
               src={product_image}

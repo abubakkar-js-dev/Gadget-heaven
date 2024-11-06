@@ -10,7 +10,7 @@ const Products = () => {
 
   useEffect(()=>{
     if(allProducts.length > 0){
-      setProducts(allProducts.slice(0,6));
+      setProducts(allProducts);
     }
   },[allProducts])
 
@@ -25,7 +25,7 @@ const Products = () => {
     setActiveCategory(categoryName);
 
     if(categoryName === 'All Products'){
-      setProducts(allProducts.slice(0,6));
+      setProducts(allProducts);
     }else{
       const remainingProducts = allProducts.filter(product => product.category === categoryName);
       setProducts(remainingProducts);

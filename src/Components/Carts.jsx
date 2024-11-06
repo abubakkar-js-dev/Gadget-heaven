@@ -1,27 +1,17 @@
-import { GiSettingsKnobs } from "react-icons/gi";
-import { CartListContext } from "../Layout/MainLayout";
 import { useContext, useEffect, useState } from "react";
-import Cart from "./Cart";
-import succesImg from '../assets/images/success.png'
+import { GiSettingsKnobs } from "react-icons/gi";
 import { useNavigate } from "react-router-dom";
+import succesImg from '../assets/images/success.png';
+import { CartListContext, TotalPriceContext } from "../Layout/MainLayout";
+import Card from "./Card";
 
 const Carts = () => {
   const { cartList, setCartList } = useContext(CartListContext);
-  const [totalCartPrice, setTotalCartPrice] = useState(0);
+  const [totalCartPrice, setTotalCartPrice] = useContext(TotalPriceContext);
   const [purchaseTotal,setParchaseTotal] = useState(null);
   const [disablePurchase,setDisablePurchase] = useState(false);
 
   const navigate = useNavigate();
-
-  useEffect(() => {
-    // calculate the total price
-    const totalCartItemPrice = cartList.reduce(
-      (acc, curr) => acc + curr.price,
-      0
-    );
-    setTotalCartPrice(totalCartItemPrice.toFixed(2));
-
-  }, [cartList, setCartList]);
 
   useEffect(()=>{
     if(cartList.length > 0){
@@ -50,13 +40,20 @@ const Carts = () => {
     navigate('/');
   }
 
+  const handleRemoveCart = (id) =>{
+    const findCart = cartList.find(cart => cart.product_id === id);
+    const remainingCarts = cartList.filter(cart => cart.product_id !== id);
+    setCartList(remainingCarts);
+    setTotalCartPrice(totalCartPrice - findCart.price);
+  }
+
   return (
     <div className="container mb-[200px]">
       <div className="flex justify-between items-center mb-5 md:mb-6 lg:mb-8">
         <h2 className="text-lg md:text-xl lg:text-2xl font-bold">Cart</h2>
         <div className=" flex gap-5 md:gap-6 items-center">
           <h2 className="text-lg md:text-xl lg:text-2xl font-bold">
-            Total Cost: ${totalCartPrice}
+            Total Cost: ${totalCartPrice.toFixed(2)}
           </h2>
           <button
             onClick={handleSortByPrice}
@@ -75,7 +72,7 @@ const Carts = () => {
       {/* cart cotainer */}
       <div className="flex flex-col gap-6">
         {cartList.map((cart) => (
-          <Cart key={cart.product_id} cart={cart} />
+          <Card key={cart.product_id} cart={cart} handleRemoveItem={handleRemoveCart} />
         ))}
       </div>
       {/* Open the modal using document.getElementById('ID').showModal() method */}

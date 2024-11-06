@@ -15,7 +15,7 @@ const Product = ({ product }) => {
           {product_title}
         </h3>
         <p className="text-base md:text-lg lg:text-xl text-gray-600 mb-4 flex-grow">
-          Price: ${price}
+          Price: ${price.toFixed(2)}
         </p>
         <div>
           <button className="text-primary p-[1px] bg-gradient-to-b from-primary via-primary to-pink-400 hover:to-primary  hover:!bg-primary hover:text-white rounded-full transition">

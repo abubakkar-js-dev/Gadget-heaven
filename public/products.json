@@ -4,7 +4,7 @@
         "product_title": "Anker Power Bank A22",
         "product_image": "https://i.ibb.co.com/6R0F972/Anker-Power-Core-Select-20000m-Ah-18-W-Fast-Charge-Power-Bank-5.jpg",
         "category": "Accessories",
-        "price": 59,
+        "price": 113.00,
         "description": "High-capacity power bank for all your mobile devices.",
         "specification": [
             "20,000mAh Capacity",
@@ -20,7 +20,7 @@
         "product_title": "Google Pixel 7 Pro",
         "product_image": "https://i.ibb.co.com/DkwYTbh/Pixel-7-Pro-Snow-8255.jpg",
         "category": "Phones",
-        "price": 899,
+        "price": 226.83,
         "description": "Google’s latest Pixel phone with advanced AI capabilities.",
         "specification": [
             "6.7-inch OLED Display",
@@ -36,7 +36,7 @@
         "product_title": "HP Spectre x360 14",
         "product_image": "https://i.ibb.co.com/BT2kHC2/652688-437137-01-front-comping-jpg.webp",
         "category": "Laptops",
-        "price": 1349,
+        "price": 179.85,
         "description": "Versatile laptop with 2-in-1 functionality.",
         "specification": [
             "13.5-inch OLED Touchscreen",
@@ -52,7 +52,7 @@
         "product_title": "OnePlus 11",
         "product_image": "https://i.ibb.co.com/51xB9SW/1710409629b-UCh-V.webp",
         "category": "Phones",
-        "price": 699,
+        "price": 224.69,
         "description": "Powerful performance with OxygenOS experience.",
         "specification": [
             "6.5-inch Fluid AMOLED Display",
@@ -68,7 +68,7 @@
         "product_title": "ASUS ROG Zephyrus G14",
         "product_image": "https://i.ibb.co.com/FYDZvRt/Asus-ROG-Zephyrus-G14-7-2.jpg",
         "category": "Laptops",
-        "price": 1599,
+        "price": 300.25,
         "description": "Compact gaming laptop with high-end graphics.",
         "specification": [
             "14-inch QHD Display",
@@ -84,7 +84,7 @@
         "product_title": "Apple Watch Series 8",
         "product_image": "https://i.ibb.co.com/vJsm8tX/apple-watch-series-8-01-500x500.webp",
         "category": "Smart Watches",
-        "price": 399,
+        "price": 399.00,
         "description": "Stay connected, healthy, and safe with Apple Watch.",
         "specification": [
             "Always-On Retina Display",
@@ -100,7 +100,7 @@
         "product_title": "Dell XPS 15",
         "product_image": "https://i.ibb.co.com/c2bh8W9/notebook-xps-15-9530-t-black-gallery-4.png",
         "category": "Laptops",
-        "price": 1499,
+        "price": 789.35,
         "description": "High-performance laptop for work and entertainment.",
         "specification": [
             "15.6-inch InfinityEdge Display",
@@ -116,7 +116,7 @@
         "product_title": "Lenovo ThinkPad X1 Carbon",
         "product_image": "https://i.ibb.co.com/XbXdjGw/26684601268-X1-Carbon-G13-Touch-Pad-202409030458051725376875136.png",
         "category": "Laptops",
-        "price": 1699,
+        "price": 500.00,
         "description": "Ultra-lightweight laptop for business professionals.",
         "specification": [
             "14-inch FHD Display",
@@ -132,7 +132,7 @@
         "product_title": "Samsung Galaxy S23 Ultra",
         "product_image": "https://i.ibb.co.com/ws8JZgy/jg-Mosu41-Gfx32-Oj-VZXFgq2-Ar8-SHc81v7z5-Yw-Ukql.webp",
         "category": "Phones",
-        "price": 1199,
+        "price": 476.05,
         "description": "A flagship phone with exceptional camera capabilities.",
         "specification": [
             "6.8-inch Dynamic AMOLED 2X",
@@ -148,7 +148,7 @@
         "product_title": "Samsung Galaxy Watch 5",
         "product_image": "https://i.ibb.co.com/BLbDPmk/Galaxy-Watch5-1-800x800.jpg",
         "category": "Smart Watches",
-        "price": 349,
+        "price": 349.00,
         "description": "Advanced health monitoring and fitness features.",
         "specification": [
             "1.4-inch Super AMOLED Display",
@@ -164,7 +164,7 @@
         "product_title": "Microsoft Surface Laptop 4",
         "product_image": "https://i.ibb.co.com/rcSGN2B/surface-laptop-4-platinum-03-500x500.webp",
         "category": "Laptops",
-        "price": 1299,
+        "price": 144.51,
         "description": "Stylish and powerful laptop for everyday use.",
         "specification": [
             "13.5-inch PixelSense Display",
@@ -180,7 +180,7 @@
         "product_title": "Sony WH-1000XM5",
         "product_image": "https://i.ibb.co.com/g3P5w9j/5318-55349.jpg",
         "category": "Accessories",
-        "price": 399,
+        "price": 131.67,
         "description": "Industry-leading noise-canceling headphones.",
         "specification": [
             "Noise Cancelling",
@@ -196,7 +196,7 @@
         "product_title": "Acer Swift 3",
         "product_image": "https://i.ibb.co.com/THR4CW6/swift-3-sf313-53-1-500x500.jpg",
         "category": "Laptops",
-        "price": 699,
+        "price": 236.96,
         "description": "Budget-friendly laptop with a lightweight design.",
         "specification": [
             "14-inch Full HD Display",

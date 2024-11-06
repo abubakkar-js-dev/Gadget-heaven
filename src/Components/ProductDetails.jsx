@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import {
   CartListContext,
   ProductsContext,
+  TotalPriceContext,
   WishListContext,
 } from "../Layout/MainLayout";
 import Heading from "./Heading";
@@ -12,8 +13,6 @@ import ReactStars from "react-rating-stars-component";
 import toast from "react-hot-toast";
 import { RxCrossCircled } from "react-icons/rx";
 import { FaRegCheckCircle } from "react-icons/fa";
-
-
 
 const ProductDetails = () => {
   const allProducts = useContext(ProductsContext);
@@ -35,21 +34,32 @@ const ProductDetails = () => {
   const { cartList, setCartList } = useContext(CartListContext);
   const { wishList, setWishList } = useContext(WishListContext);
   const [disableWishBtn, setDisableWishBtn] = useState(false);
+  const [totalCartPrice,setTotalCartPrice] = useContext(TotalPriceContext);
+  console.log(typeof Number(totalCartPrice));
 
   const handleAddToCart = (product) => {
+    const newTotalPrice = totalCartPrice + product.price;
     if (cartList.includes(product)) {
-      toast("Product is already exist in cartlist.",{
+      toast("Product is already exist in cartlist.", {
         duration: 4000,
         position: "top-center",
         icon: <RxCrossCircled className="text-red-600" />,
       });
+    } else if (Number(newTotalPrice) > 1000) {
+      toast("You cannot add items exceeding a total of $1000.",{
+        duration: 4000,
+        position: "top-center",
+        icon: <RxCrossCircled className="text-red-600" />,
+      });
+      return;
     } else {
       setCartList([...cartList, product]);
-      toast('Added product to cart list.',{
-        duration:4000,
+      toast("Added product to cart list.", {
+        duration: 4000,
         position: "top-center",
-        icon: <FaRegCheckCircle className="text-green-600" />
-      })
+        icon: <FaRegCheckCircle className="text-green-600" />,
+      });
+      setTotalCartPrice(totalCartPrice + product.price);
     }
   };
   const handleWishListBtn = (product) => {
@@ -59,11 +69,11 @@ const ProductDetails = () => {
       setWishList([...wishList, product]);
       setDisableWishBtn(true);
 
-      toast('Added product to wish list.',{
+      toast("Added product to wish list.", {
         duration: 4000,
         position: "top-center",
         icon: <FaRegCheckCircle className="text-green-600" />,
-      })
+      });
     }
   };
   return (
@@ -86,7 +96,7 @@ const ProductDetails = () => {
               {product_title}
             </h2>
             <p className="text-lg lg:text-xl font-semibold text-gray-700 mb-3">
-              Price: $ {price}
+              Price: $ {price.toFixed(2)}
             </p>
             <span
               className={`inline-block px-3 py-1 text-sm font-medium  ${
@@ -115,7 +125,7 @@ const ProductDetails = () => {
 
             <div className="mb-4">
               <div className="text-base lg:text-lg font-bold text-black mb-0 flex gap-2">
-                <span>Ratings</span> 
+                <span>Ratings</span>
                 <ReactStars count={1} value={1} size={26} />
               </div>
               <div className="flex ml-2 mt-2 lg:mt-3">

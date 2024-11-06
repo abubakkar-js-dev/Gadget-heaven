@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import { RxCrossCircled } from "react-icons/rx";
 
-const Cart = ({ cart, addToCartBtnTxt = "",handleRemoveItem }) => {
+const Card = ({ cart, addToCartBtnTxt = "",handleRemoveItem,handleAddToCartFromWish = null }) => {
   const { product_image, product_title, description, price,product_id} = cart;
   return (
-    <div className="p-6 md:p-8 rounded-2xl flex items-center bg-white gap-5 md:gap-8 shadow">
+    <div className="p-6 md:p-8 rounded-2xl flex flex-col md:flex-row items-center bg-white gap-5 md:gap-8 shadow">
       <div>
         <img src={product_image} className="h-[200px] w-[220px] max-w-full bg-gray-200 rounded-xl" />
       </div>
@@ -23,7 +23,7 @@ const Cart = ({ cart, addToCartBtnTxt = "",handleRemoveItem }) => {
           Price: ${price.toFixed(2)}
         </h4>
         {addToCartBtnTxt && (
-          <button className="h-10 md:h-12 px-5 md:px-7 text-white bg-primary hover:bg-purple-700 text-base md:text-lg font-medium rounded-full max-w-[164px]">
+          <button onClick={() =>handleAddToCartFromWish(cart)} className="h-10 md:h-12 px-5 md:px-7 text-white bg-primary hover:bg-purple-700 text-base md:text-lg font-medium rounded-full max-w-[164px]">
             {addToCartBtnTxt}
           </button>
         )}
@@ -32,10 +32,11 @@ const Cart = ({ cart, addToCartBtnTxt = "",handleRemoveItem }) => {
   );
 };
 
-Cart.propTypes = {
+Card.propTypes = {
   cart: PropTypes.object.isRequired,
   addToCartBtnTxt: PropTypes.string.isRequired,
   handleRemoveItem: PropTypes.func.isRequired,
+  handleAddToCartFromWish: PropTypes.func.isRequired,
 };
 
-export default Cart;
+export default Card;

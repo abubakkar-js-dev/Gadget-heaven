@@ -3,7 +3,7 @@ import MainLayout from "../Layout/MainLayout";
 import Statistics from "../Pages/Statistics";
 import Dashboard from "../Pages/Dashboard";
 import Home from "../Pages/Home";
-import ProductDetails from "../Components/ProductDetails";
+import ProductDetails from "../Pages/ProductDetails"
 import ContactUs from "../Pages/ContactUs";
 import ErrorPage from "../Pages/ErrorPage";
 

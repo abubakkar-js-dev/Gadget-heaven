@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Hero from "../Components/Hero";
 import Products from "../Components/Products";
-import Banner from "../Components/banner"
+import Banner from "../Components/Banner"
 
 const Home = () => {
     return (

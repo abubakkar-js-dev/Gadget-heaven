@@ -37,7 +37,7 @@ const Products = () => {
         Explore Cutting -Edge Gadgets
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
-        <div className="col-span-1  md:p-6 border rounded-2xl shadow-sm  flex flex-col gap-6 self-start">
+        <div className="col-span-1  md:p-6 md:border rounded-2xl shadow-sm  flex flex-col gap-6 self-start">
           {/* <button className="h-14 bg-primary text-white pl-5 pr-14 rounded-full text-lg font-extrabold">
             All Products
           </button> */}

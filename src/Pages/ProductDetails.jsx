@@ -6,7 +6,7 @@ import {
   TotalPriceContext,
   WishListContext,
 } from "../Layout/MainLayout";
-import Heading from "./Heading";
+import Heading from "../Components/Heading";
 import { BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 import ReactStars from "react-rating-stars-component";
@@ -81,7 +81,7 @@ const ProductDetails = () => {
       <div className="bg-primary min-h-[463px] ">
         <Heading headingText="Product Details" headingTagName="h2" />
       </div>
-      <div className="container -mt-[280px] flex flex-col justify-center items-center">
+      <div className="container lg:-mt-[280px] flex flex-col justify-center items-center py-8">
         <div className="w-full p-6 lg:p-8 bg-white rounded-3xl shadow  flex gap-6 lg:gap-8">
           <div className="w-1/3 rounded-lg">
             <img

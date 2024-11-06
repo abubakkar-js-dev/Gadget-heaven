@@ -49,9 +49,9 @@ const Carts = () => {
 
   return (
     <div className="container mb-[200px]">
-      <div className="flex justify-between items-center mb-5 md:mb-6 lg:mb-8">
+      <div className="flex flex-col md:flex-row gap-5 justify-between items-center mb-5 md:mb-6 lg:mb-8">
         <h2 className="text-lg md:text-xl lg:text-2xl font-bold">Cart</h2>
-        <div className=" flex gap-5 md:gap-6 items-center">
+        <div className=" flex flex-col md:flex-row gap-5 md:gap-6 items-center">
           <h2 className="text-lg md:text-xl lg:text-2xl font-bold">
             Total Cost: ${totalCartPrice.toFixed(2)}
           </h2>

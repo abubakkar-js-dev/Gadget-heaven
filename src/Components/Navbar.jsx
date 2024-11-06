@@ -8,7 +8,7 @@ const Navbar = ({cartListCount,wishListCount}) => {
   const Links = (
     <>
       <li>
-        <NavLink to={"/"}>Home</NavLink>
+          <NavLink to={'/'}>Home</NavLink>
       </li>
       <li>
         <NavLink to={"/statistics"}>Statistics</NavLink>
@@ -22,7 +22,7 @@ const Navbar = ({cartListCount,wishListCount}) => {
     </>
   );
   return (
-    <nav className={`${pathname === '/' ? 'bg-primary text-white pb-10': 'text-black'} m-[30px] mb-0 pt-3 rounded-t-[32px]`}>
+    <nav className={`${pathname === '/' ? 'bg-primary text-white pb-10': 'text-black'} m-4 mb-0 md:m-[30px]  md:mb-0 pt-3 rounded-t-[32px]`}>
       <div className="navbar container ">
         <div className="navbar-start">
           <div className="dropdown">
@@ -49,7 +49,7 @@ const Navbar = ({cartListCount,wishListCount}) => {
               {Links}
             </ul>
           </div>
-          <a className=" text-lg md:text-xl font-bold">Gadget Heaven</a>
+          <a className=" text-base md:text-xl font-bold">Gadget Heaven</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{Links}</ul>

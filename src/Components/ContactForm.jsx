@@ -4,7 +4,7 @@ const ContactForm = () => {
         e.preventDefault();
     }
     return (
-        <div className="bg-primary/30 w-full flex items-center justify-center p-6 rounded-3xl">
+        <div className="bg-primary/30 w-full flex items-center justify-center p-4 md:p-6 rounded-3xl">
         <div className="bg-white p-8 rounded-3xl shadow-md w-full">
           <h2 className="text-3xl font-bold text-black mb-4">
           Get in Touch with Us

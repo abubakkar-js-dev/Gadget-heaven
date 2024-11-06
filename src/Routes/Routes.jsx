@@ -4,7 +4,7 @@ import Statistics from "../Pages/Statistics";
 import Dashboard from "../Pages/Dashboard";
 import Home from "../Pages/Home";
 import ProductDetails from "../Components/ProductDetails";
-import ContactUs from "../Components/ContactUs";
+import ContactUs from "../Pages/ContactUs";
 import ErrorPage from "../Pages/ErrorPage";
 
 const router = createBrowserRouter([

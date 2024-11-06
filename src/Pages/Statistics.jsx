@@ -1,11 +1,15 @@
 import { Helmet } from "react-helmet-async";
+import Heading from "../Components/Heading";
 const Statistics = () => {
     return (
         <div>
             <Helmet>
                 <title>Statistics || Gadget Heaven</title>
             </Helmet>
-            <h2>Statistics section</h2>
+            <div className="bg-primary mb">
+            <Heading headingText="Statistics" headingTagName="h2" />
+            </div>
+
         </div>
     );
 };
